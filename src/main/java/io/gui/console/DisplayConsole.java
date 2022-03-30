@@ -1,5 +1,7 @@
 package io.gui.console;
 
+import java.util.Map;
+
 public class DisplayConsole extends Console {
 
 	private static final String EXIT_KEY = "0";
@@ -14,15 +16,29 @@ public class DisplayConsole extends Console {
 		menu = menu + EXIT_OPTION_LINE + LINE_BREAK;
 		return menu;
 	}
-	
-	public String menu(String... options) {
-		StringBuilder menuBuilder  = new StringBuilder();
 
+	public String menu(String... options) {
+
+		StringBuilder menuBuilder = new StringBuilder();
 		for (int i = 1; i <= options.length; i++) {
 			String optionText = options[i - 1];
 			String optionLine = i + "." + optionText + LINE_BREAK;
 			menuBuilder.append(optionLine);
 		}
 		return menuBuilder.toString() + EXIT_OPTION_LINE + LINE_BREAK;
+	}
+
+	public String menu(Map<String, String> entranceMenu) {
+
+		StringBuilder menuBuilder = new StringBuilder();
+		for (Map.Entry<String, String> option : entranceMenu.entrySet()) {
+			String key = option.getKey();
+			String text = option.getValue();
+
+			String optionLine = key + "." + text + LINE_BREAK;
+			menuBuilder.append(optionLine);
+		}
+		return menuBuilder.toString() + EXIT_OPTION_LINE + LINE_BREAK;
+
 	}
 }
