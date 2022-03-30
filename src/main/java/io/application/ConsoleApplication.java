@@ -12,7 +12,12 @@ public class ConsoleApplication {
 
 	public void test() {
 
-		console.title("Welcome ! ");
+		console.title("Welcome ! What is your favourite chocolate ?");
+		console.message("1.Dark Chocolate");
+		console.message("2.Milk Chocolate");
+		console.message("3.White Chocolate");
+		console.message("0.Exit");
+		console.line();
 
 	}
 

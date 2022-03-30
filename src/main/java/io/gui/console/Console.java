@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Console {
 	
-	protected static final String LINE = "-------------------------------------";
+	protected static final String LINE = "---------------------------------------------";
 	protected static final String LINE_BREAK = "\n";
 	
 	Scanner keyboard = new Scanner(System.in);
