@@ -12,7 +12,17 @@ public class DisplayConsole extends Console {
 		menu = menu + "2.Milk Chocolate" + LINE_BREAK;
 		menu = menu + "3.White Chocolate" + LINE_BREAK;
 		menu = menu + EXIT_OPTION_LINE + LINE_BREAK;
-		menu = menu + LINE;
 		return menu;
+	}
+	
+	public String menu(String... options) {
+		StringBuilder menuBuilder  = new StringBuilder();
+
+		for (int i = 1; i <= options.length; i++) {
+			String optionText = options[i - 1];
+			String optionLine = i + "." + optionText + LINE_BREAK;
+			menuBuilder.append(optionLine);
+		}
+		return menuBuilder.toString() + EXIT_OPTION_LINE + LINE_BREAK;
 	}
 }

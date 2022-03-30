@@ -16,7 +16,13 @@ public class ConsoleApplication {
 	public void test() {
 
 		console.title("Welcome ! What is your favourite chocolate ?");
+		
+		console.title("Menu with directly text in method ");
 		console.message(display.showChocolateMenu());
+			
+		console.title("Menu with varargs as input parameters");
+		console.message(display.menu("Dark Chocolate", "Milk Chocolate", "White Chocolate"));
+
 	}
 
 	public static void main(String[] args) {
