@@ -5,18 +5,23 @@ import java.util.Map;
 
 import io.gui.console.Console;
 import io.gui.console.DisplayConsole;
+import io.gui.console.ReadConsole;
 
-public class ConsoleApplication {
+public class SandBoxConsole {
 
 	Console console;
 	DisplayConsole display;
+	ReadConsole read;
 	Map<String, String> chocolateMenu;
 
-	public ConsoleApplication() {
+	public SandBoxConsole() {
 		this.console = new Console();
 		this.display = new DisplayConsole();
-
 		createChocolateMenu();
+		
+		this.read = new ReadConsole();
+
+		
 	}
 
 	public void test() {
@@ -31,6 +36,11 @@ public class ConsoleApplication {
 
 		console.title("Menu with hashmap as input parameter");
 		console.message(display.menu(chocolateMenu));
+		
+		console.message(" Your choice: ");
+		console.lineBreak();
+		int option = read.ensureIntegerBetween(display.exitKey(), chocolateMenu.size());
+		console.message(" Your choice is "+option);
 
 	}
 
@@ -49,7 +59,7 @@ public class ConsoleApplication {
 
 	public static void main(String[] args) {
 
-		ConsoleApplication consoleApplication = new ConsoleApplication();
+		SandBoxConsole consoleApplication = new SandBoxConsole();
 		consoleApplication.test();
 
 	}

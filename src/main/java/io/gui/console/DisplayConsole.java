@@ -41,4 +41,8 @@ public class DisplayConsole extends Console {
 		return menuBuilder.toString() + EXIT_OPTION_LINE + LINE_BREAK;
 
 	}
+	
+	public int exitKey() {
+		return Integer.parseInt(EXIT_KEY);
+	}
 }
