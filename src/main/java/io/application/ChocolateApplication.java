@@ -9,8 +9,6 @@ import io.gui.console.ReadConsole;
 
 public class ChocolateApplication {
 	
-		// Search emoji on: https://unicode.org/emoji/charts/full-emoji-list.html
-		// then go to https://www.fileformat.info/info/unicode/char/search.htm to convert code for java source code 
 		private static final String EMOJI_THUMBS_UP = "\uD83D\uDC4D";
 		private static final String EMOJI_THUMBS_DOWN = "\uD83D\uDC4E";
 		private static final String EMOJI_OK_HAND = "\uD83D\uDC4C";
@@ -18,6 +16,9 @@ public class ChocolateApplication {
 		private static final String EMOJI_SMILING_FACE = "\u263A";
 		private static final String EMOJI_GRINNING_FACE = "\uD83E\uDD2A";
 		private static final String EMOJI_FACE_WITH_ROLLING_EYES ="\uD83D\uDE44";
+		//TODO extract in method createEmojis 
+		// and use an HashMap to store each emoji name and code instead of constant
+		//...in order to maybe use a properties file later (another day) #teasing ;-)
 		
 		Console console;
 		DisplayConsole display;
@@ -54,9 +55,10 @@ public class ChocolateApplication {
 				console.message(EMOJI_CHOCOLATE_BAR + " Healthy chocolate !" + EMOJI_OK_HAND+EMOJI_THUMBS_UP);
 				break;
 			case 2:
-				console.message(EMOJI_CHOCOLATE_BAR+ " My favourite chocolate !" + EMOJI_SMILING_FACE);
+				console.message(EMOJI_CHOCOLATE_BAR+ " The best chocolate for easter !" + EMOJI_SMILING_FACE);
 				break;
 			case 3:
+				// TODO display the content of the file easter.txt in src/main/resources
 				console.message(EMOJI_CHOCOLATE_BAR +" Sugar and fat : unhealthy !"+ EMOJI_THUMBS_DOWN+EMOJI_GRINNING_FACE);
 				break;
 			default:

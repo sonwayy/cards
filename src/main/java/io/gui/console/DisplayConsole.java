@@ -16,7 +16,7 @@ public class DisplayConsole extends Console {
 		menu = menu + EXIT_OPTION_LINE + LINE_BREAK;
 		return menu;
 	}
-
+	
 	public String menu(String... options) {
 
 		StringBuilder menuBuilder = new StringBuilder();

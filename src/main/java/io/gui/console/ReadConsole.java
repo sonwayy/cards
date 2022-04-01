@@ -2,9 +2,15 @@ package io.gui.console;
 
 public class ReadConsole extends Console {
 	
+	public int ensureInteger() {
+		//TODO only an integer
+		//A specific exception must be handled here when something else written
+				return Integer.parseInt(keyboard.nextLine());
+	}
+	
 	public int ensureIntegerBetween(int minimum, int maximum) {
 		while (true) {
-			int value = Integer.parseInt(keyboard.nextLine());
+			int value = ensureInteger();
 			if (minimum <= value && value <= maximum)
 				return value;
 			else {
