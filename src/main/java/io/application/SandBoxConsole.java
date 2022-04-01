@@ -77,7 +77,7 @@ public class SandBoxConsole {
 		chocolateMenu = new HashMap<>();
 		chocolateMenu.put("1", "Dark Chocolate");
 		chocolateMenu.put("2", "Milk Chocolate");
-		chocolateMenu.put("3", "NetBeans");
+		chocolateMenu.put("3", "White Chocolate");
 
 		// Java 9 and higher
 		// chocolateMenu = Map.of("1", "Dark Chocolate", "2", "Milk Chocolate", "3",
