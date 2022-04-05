@@ -3,9 +3,14 @@ package io.gui.console;
 public class ReadConsole extends Console {
 	
 	public int ensureInteger() {
-		//TODO bugfix: only an integer catch the exception
-		//A specific exception must be handled here when something else written
+			while(true) {
+			try {
 				return Integer.parseInt(keyboard.nextLine());
+			}catch(Exception e) {
+				System.out.println("Erreur, un entier doit être saisi !\n");
+			}
+		}
+		
 	}
 	
 	public int ensureIntegerBetween(int minimum, int maximum) {
